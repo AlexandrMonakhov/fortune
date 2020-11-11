@@ -1,0 +1,259 @@
+body
+  font-family: sans-serif
+  height: 100vh
+  width: 100vw
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+
+.wheel
+  position: relative
+  width: 100%
+  height: 100%
+  max-width: 714px
+  max-height: 714px
+  border: 15px solid  rgb(229, 3, 5)
+  border-radius: 50%
+  background-image: conic-gradient(red 0deg 30deg, white 30deg 60deg, red 60deg 90deg, white 90deg 120deg, red 120deg 150deg, white 150deg 180deg, red 180deg 210deg, white 210deg 240deg, red 240deg 270deg, white 270deg 300deg, red 300deg 330deg, white 330deg 360deg)
+  box-shadow: -1px 0px 0px 5px #910405, inset -1px 0px 50px 0px rgba(0, 0, 0, 0.7), -1px 0px 50px 0px rgba(0, 0, 0, 0.7)
+  @media (max-width: 1155px) 
+    max-width: 600px
+    max-height: 600px
+  @media (max-width: 665px)
+    max-width: 450px
+    max-height: 450px
+  @media (max-width: 535px)
+    max-width: 350px
+    max-height: 350px
+  &__text
+    font-size: 20px
+    font-weight: bold
+    @media (max-width: 665px)
+      font-size: 14px
+    @media (max-width: 535px)
+      font-size: 12px
+  &--active
+    animation: spin 2s 6 linear
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 70px
+    height: 70px
+    background-color: #e6a950
+    border-radius: 50%
+    border: 5px solid #ffd403
+    @media (max-width: 665px)
+      width: 45px
+      height: 45px
+
+.triangle
+  position: absolute
+  top: 7%
+  left: 51%
+  transform: translateX(-50%)
+  border: 70px solid transparent
+  border-top: 90px solid rgb(248,225,87)
+  border-top-left-radius: 50px
+  border-top-right-radius: 50px
+  z-index: 1
+  @media (max-width: 1155px)
+    top: 10%
+  @media (max-width: 665px)
+    top: 20%
+    border: 35px solid transparent
+    border-top: 50px solid #f8e157
+  @media (max-width: 535px)
+    top: 25%
+
+@keyframes spin
+  0%
+    transform: rotateZ(-360deg)
+  100%
+    transform: rotateZ(0deg)
+
+.wheel__text
+  text-align: center
+  &-1
+    position: absolute
+    bottom: 476px
+    left: 155px
+    color: #ffffff
+    transform: translateY(-50%) rotate(226deg)
+    @media (max-width: 1155px)
+      bottom: 401px
+      left: 117px
+    @media (max-width: 665px)
+      bottom: 315px
+      left: 80px
+    @media (max-width: 535px)
+      bottom: 238px
+      left: 56px
+  &-2 
+    position: absolute
+    bottom: 533px
+    left: 238px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(252deg)
+    @media (max-width: 1155px)
+      bottom: 447px
+      left: 193px
+    @media (max-width: 665px)
+      bottom: 331px
+      left: 143px
+    @media (max-width: 535px)
+      bottom: 260px
+      left: 105px
+  &-3
+    position: absolute
+    bottom: 536px
+    left: 334px
+    color: #ffffff
+    transform: translateY(-50%) rotate(283deg)
+    @media (max-width: 1155px)
+      bottom: 461px
+      left: 279px
+    @media (max-width: 665px)
+      bottom: 334px
+      left: 202px
+    @media (max-width: 535px)
+      bottom: 255px
+      left: 150px
+  &-4
+    position: absolute
+    bottom: 475px
+    left: 437px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(314deg)
+    @media (max-width: 1155px)
+      bottom: 412px
+      left: 375px
+    @media (max-width: 665px)
+      bottom: 302px
+      left: 271px
+    @media (max-width: 535px)
+      bottom: 235px
+      left: 208px
+  &-5
+    position: absolute
+    bottom: 377px
+    left: 409px
+    color: #ffffff
+    transform: translateY(-50%) rotate(337deg)
+    @media (max-width: 1155px)
+      bottom: 286px
+      left: 359px
+    @media (max-width: 665px)
+      bottom: 231px
+      left: 260px
+    @media (max-width: 535px)
+      bottom: 165px
+      left: 212px
+      max-width: 138px
+  &-6
+    position: absolute
+    bottom: 259px
+    left: 430px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(373deg)
+    @media (max-width: 1155px)
+      bottom: 207px
+      left: 362px
+    @media (max-width: 665px)
+      bottom: 158px
+      left: 266px
+    @media (max-width: 535px)
+      bottom: 107px
+      left: 228px
+  &-7
+    position: absolute
+    bottom: 188px
+    left: 446px
+    color: #ffffff
+    transform: translateY(-50%) rotate(406deg)
+    @media (max-width: 1155px)
+      bottom: 153px
+      left: 371px
+    @media (max-width: 665px)
+      bottom: 123px
+      left: 272px
+    @media (max-width: 535px)
+      bottom: 82px
+      left: 214px
+  &-8
+    position: absolute
+    bottom: 126px
+    left: 356px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(432deg)
+    @media (max-width: 1155px)
+      left: 290px
+    @media (max-width: 665px)
+      bottom: 92px
+      left: 219px
+    @media (max-width: 535px)
+      bottom: 69px
+      left: 162px
+  &-9
+    position: absolute
+    bottom: 125px
+    left: 231px
+    color: #ffffff
+    transform: translateY(-50%) rotate(462deg)
+    @media (max-width: 1155px)
+      left: 194px
+    @media (max-width: 665px)
+      bottom: 80px
+      left: 143px
+    @media (max-width: 535px)
+      bottom: 60px
+      left: 101px
+  &-10
+    position: absolute
+    bottom: 177px
+    left: 147px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(495deg)
+    @media (max-width: 665px)
+      bottom: 113px
+      left: 94px
+    @media (max-width: 535px)
+      bottom: 85px
+      left: 66px
+  &-11
+    position: absolute
+    bottom: 262px
+    left: 15px
+    color: #ffffff
+    transform: translateY(-50%) rotate(522deg)
+    max-width: 300px
+    @media (max-width: 1155px)
+      bottom: 209px
+      left: 0px
+      max-width: 257px
+    @media (max-width: 665px)
+      bottom: 158px
+      max-width: 199px
+    @media (max-width: 535px)
+      bottom: 92px
+      max-width: 119px
+  &-12
+    position: absolute
+    bottom: 367px
+    left: 9px
+    color: rgb(229, 3, 5)
+    transform: translateY(-50%) rotate(553deg)
+    max-width: 300px
+    @media (max-width: 1155px)
+      bottom: 299px
+      left: -2px
+      max-width: 254px
+    @media (max-width: 665px)
+      bottom: 231px
+      max-width: 201px
+    @media (max-width: 535px)
+      bottom: 160px
+      max-width: 111px
