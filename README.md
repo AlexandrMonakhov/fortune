@@ -1,3 +1,3 @@
 # fortune
 
-Ссылка на сайт https://alexandrmonakhov.github.io/fortune/
+Ссылка на GitPages https://alexandrmonakhov.github.io/fortune/
